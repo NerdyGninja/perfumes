@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+
+h1, h2, h3 {
+	font-family: 'Cinzel Decorative', cursive;
+}
+
+h4, h5, h6, button {
+  font-family: 'Rancho', cursive;
+}
+
+
