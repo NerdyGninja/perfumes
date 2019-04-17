@@ -1,0 +1,52 @@
+<%= form_with(model: perfume, local: true) do |form| %>
+  <% if perfume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(perfume.errors.count, "error") %> prohibited this perfume from being saved:</h2>
+
+      <ul>
+      <% perfume.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :img %>
+    <%= form.text_field :img %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume %>
+    <%= form.number_field :volume %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

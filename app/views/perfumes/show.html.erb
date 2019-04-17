@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @perfume.img %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @perfume.brand %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @perfume.title %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @perfume.gender %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @perfume.volume %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @perfume.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @perfume.description %>
+</p>
+
+<%= link_to 'Edit', edit_perfume_path(@perfume) %> |
+<%= link_to 'Back', perfumes_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perfumes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Img</th>
+      <th>Brand</th>
+      <th>Title</th>
+      <th>Gender</th>
+      <th>Volume</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perfumes.each do |perfume| %>
+      <tr>
+        <td><%= perfume.img %></td>
+        <td><%= perfume.brand %></td>
+        <td><%= perfume.title %></td>
+        <td><%= perfume.gender %></td>
+        <td><%= perfume.volume %></td>
+        <td><%= perfume.price %></td>
+        <td><%= perfume.description %></td>
+        <td><%= link_to 'Show', perfume %></td>
+        <td><%= link_to 'Edit', edit_perfume_path(perfume) %></td>
+        <td><%= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Perfume', new_perfume_path %>
