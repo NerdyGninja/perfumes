@@ -2,7 +2,33 @@
 
 <h1>Perfumes</h1>
 
-<table>
+<div class="container">
+  <div class="row">
+    <% @perfumes.each do |perfume| %>
+    <div class="col-xs-6 col-sm-4 col-md-3">
+      <div class="text-center">
+        <h4><%= perfume.brand %></h4>
+        <div>
+        <%= link_to (image_tag perfume.img, class: 'img-fluid', size: '164x164'), perfume %>
+        </div>
+        <div>
+          <h5><%= perfume.title %></h5>
+          <h6 class="text-muted"><%= perfume.volume %>ml</h6>
+          <p class="text-muted"><%= perfume.gender %></p>
+          <!-- <h5 class="card-text">R<%#= perfume.price %></h5> -->
+          <!-- <div class="card-link"><%#= link_to 'Show', perfume %></div><br>
+          <div class="card-link"><%#= link_to 'Edit', edit_perfume_path(perfume) %></div><br>
+          <div class="card-link"><%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
+        </div>
+      </div>
+  </div>
+    <% end -%>
+  </div>
+</div>
+
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Img</th>
@@ -15,20 +41,20 @@
   </thead>
 
   <tbody>
-    <% @perfumes.each do |perfume| %>
+    <%# @perfumes.each do |perfume| %>
       <tr>
-        <td><%= image_tag perfume.img, size: '120x120', class: 'img-fluid' %></td>
-        <td><%= perfume.brand %></td>
-        <td><%= perfume.title %></td>
-        <td><%= perfume.volume %></td>
-        <td><%= perfume.price %></td>
-        <td><%= link_to 'Show', perfume %></td>
-        <td><%= link_to 'Edit', edit_perfume_path(perfume) %></td>
-        <td><%= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= image_tag perfume.img, size: '120x120', class: 'img-fluid' %></td>
+        <td><%#= perfume.brand %></td>
+        <td><%#= perfume.title %></td>
+        <td><%#= perfume.volume %></td>
+        <td><%#= perfume.price %></td>
+        <td><%#= link_to 'Show', perfume %></td>
+        <td><%#= link_to 'Edit', edit_perfume_path(perfume) %></td>
+        <td><%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <#end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
