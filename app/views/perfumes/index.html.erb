@@ -1,26 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Perfumes</h1>
+<h1 class="display-4 text-center">Perfumes</h1>
 
 <div class="container">
   <div class="row">
     <% @perfumes.each do |perfume| %>
     <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="text-center">
-        <h4><%= perfume.brand %></h4>
-        <div>
-        <%= link_to (image_tag perfume.img, class: 'img-fluid', size: '164x164'), perfume %>
-        </div>
-        <div>
-          <h5><%= perfume.title %></h5>
-          <h6 class="text-muted"><%= perfume.volume %>ml</h6>
-          <p class="text-muted"><%= perfume.gender %></p>
-          <!-- <h5 class="card-text">R<%#= perfume.price %></h5> -->
-          <!-- <div class="card-link"><%#= link_to 'Show', perfume %></div><br>
-          <div class="card-link"><%#= link_to 'Edit', edit_perfume_path(perfume) %></div><br>
-          <div class="card-link"><%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></div> -->
+    <%= link_to perfume, { class: 'text-decoration-none' } do %>
+      <div class="text-center perfume-container">
+        <%= image_tag perfume.img, class: 'img-fluid', size: '100x100' %>
+        <div class="perfume-container-text">
+          <h6 class="brand font-weight-bold"><%= perfume.brand %></h6>
+          <h6><%= perfume.title %></h6>
+          <p class="text-muted"><%= perfume.volume %>ml - <%= perfume.gender %></p>
+          <p class="perfume-price">R<%= perfume.price %></p>
         </div>
       </div>
+    <% end %>
+    <hr>
   </div>
     <% end -%>
   </div>

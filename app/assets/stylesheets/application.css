@@ -19,8 +19,37 @@ h1, h2, h3 {
 	font-family: 'Cinzel Decorative', cursive;
 }
 
-h4, h5, h6, button {
+h4, h5, h6, p, button {
   font-family: 'Lustria', serif;
 }
 
+.text-decoration-none,
+.text-decoration-none:hover {
+	text-decoration: none;
+	color: #444;
+}
 
+.perfume-container {
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+.perfume-container:hover {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	transition: 0.8s;
+}
+
+.perfume-container-text h6 {
+	margin-bottom: 2px;
+}
+
+.perfume-container-text p {
+	margin-bottom: 2px;
+}
+
+.perfume-price {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
