@@ -14,6 +14,9 @@
           <h6><%= perfume.title %></h6>
           <p class="text-muted"><%= perfume.volume %>ml - <%= perfume.gender %></p>
           <p class="perfume-price">R<%= perfume.price %></p>
+          <%#= link_to 'Show', perfume %>
+          <%#= link_to 'Edit', edit_perfume_path(perfume) %>
+          <%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
     <% end %>
@@ -22,36 +25,6 @@
     <% end -%>
   </div>
 </div>
-
-
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Img</th>
-      <th>Brand</th>
-      <th>Title</th>
-      <th>Volume</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%# @perfumes.each do |perfume| %>
-      <tr>
-        <td><%#= image_tag perfume.img, size: '120x120', class: 'img-fluid' %></td>
-        <td><%#= perfume.brand %></td>
-        <td><%#= perfume.title %></td>
-        <td><%#= perfume.volume %></td>
-        <td><%#= perfume.price %></td>
-        <td><%#= link_to 'Show', perfume %></td>
-        <td><%#= link_to 'Edit', edit_perfume_path(perfume) %></td>
-        <td><%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <#end %>
-  </tbody>
-</table> -->
 
 <br>
 

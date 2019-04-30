@@ -1,39 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Img:</strong>
-  <%= @perfume.img %>
-</p>
-
-<p>
-  <strong>Brand:</strong>
-  <%= @perfume.brand %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @perfume.title %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @perfume.gender %>
-</p>
-
-<p>
-  <strong>Volume:</strong>
-  <%= @perfume.volume %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @perfume.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @perfume.description %>
-</p>
-
-<%= link_to 'Edit', edit_perfume_path(@perfume) %> |
-<%= link_to 'Back', perfumes_path %>
+<div class="padding"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="perfume-show-image">
+        <%= image_tag @perfume.img, class: 'img-fluid mx-auto perfume-show', size: '300x400' %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="perfume-info">
+        <h4><%= @perfume.brand %> | <%= @perfume.title %></h4>
+        <p class="text-muted small"><%= @perfume.gender %></p>
+        <h6 class="text-bold">R<%= @perfume.price %></h6>
+        <hr>
+        <h6 class="text-bold">SIZE: <%= @perfume.volume %>ml</h6>
+        <br>
+        <div class="perfume-info-container">
+          <p class="perfume-show-information"><i class="fas fa-info-circle"></i>  Details</p>
+        </div>
+        <p><%= @perfume.description %></p>
+        <%= link_to "BACK", perfumes_path %>
+      </div>
+    </div>
+  </div>
+</div>

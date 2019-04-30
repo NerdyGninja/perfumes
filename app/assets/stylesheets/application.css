@@ -53,3 +53,26 @@ h4, h5, h6, p, button {
 	margin-top: 20px;
 	padding-bottom: 20px;
 }
+
+.perfume-show {
+	border: 0.5px solid #DCDCDC;
+}
+
+.padding {
+	padding-top: 50px
+}
+
+.perfume-show-image img {
+	display: block;
+	margin: auto;
+}
+
+.perfume-info-container {
+	background-color: #DCDCDC;
+	border-radius: 25px;
+}
+
+.perfume-info-container p {
+	padding: 5px;
+	margin-left: 10px;
+}
