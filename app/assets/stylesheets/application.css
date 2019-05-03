@@ -14,13 +14,20 @@
  *= require_self
  */
 
-
-h1, h2, h3 {
-	font-family: 'Cinzel Decorative', cursive;
+.main-container {
+	padding: 0;
 }
 
-h4, h5, h6, p, button {
-  font-family: 'Lustria', serif;
+h1, h2, h3 {
+	font-family: 'Tangerine', cursive;
+}
+
+h4, h5, h6, p, button, a, span {
+  font-family: 'Alegreya SC', serif;
+}
+
+.text-bold {
+	font-weight: bold;
 }
 
 .text-decoration-none,

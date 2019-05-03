@@ -1,4 +1,10 @@
 class SimplePagesController < ApplicationController
-  def index
+  def delivery
+  end
+
+  def order
+  end
+
+  def faq
   end
 end
