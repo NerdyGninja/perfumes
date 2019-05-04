@@ -1,12 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="display-4 text-center">Perfumes</h1>
-
 <div class="container">
+  <div class="text-center">
+    <h1 class="display-4">Perfumes</h1>
+    <h5>Free delivery on orders exceeding R400</h5>
+    <h6>R90 Delivery fee for orders under R400</h6>
+  </div>
+  <hr>
+
   <div class="row">
     <% @perfumes.each do |perfume| %>
     <div class="col-xs-6 col-sm-4 col-md-3">
-    <%= link_to perfume, { class: 'text-decoration-none' } do %>
+      <%= link_to perfume, { class: 'text-decoration-none' } do %>
       <div class="text-center perfume-container">
         <%= image_tag perfume.img, class: 'img-fluid', size: '100x100' %>
         <div class="perfume-container-text">
@@ -19,9 +22,9 @@
           <%#= link_to 'Destroy', perfume, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div>
-    <% end %>
-    <hr>
-  </div>
+      <% end %>
+      <hr>
+    </div>
     <% end -%>
   </div>
 </div>
