@@ -4,7 +4,12 @@ class PerfumesController < ApplicationController
   # GET /perfumes
   # GET /perfumes.json
   def index
-    @perfumes = Perfume.all
+    if params[:q]
+      search_term = params[:q]
+      @perfumes = Perfume.search(search_term)
+    else
+      @perfumes = Perfume.all
+    end
   end
 
   # GET /perfumes/1

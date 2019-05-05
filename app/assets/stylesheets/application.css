@@ -14,7 +14,6 @@
  *= require_self
  */
 
-
 a {
 	color: #000;
 }
@@ -32,12 +31,18 @@ h1, h2, h3 {
 	font-family: 'Tangerine', cursive;
 }
 
-h4, h5, h6, p, button, a, span, li {
+h4, h5, h6, p, button, a, span, li, input {
   font-family: 'Alegreya SC', serif;
 }
 
 .text-bold {
 	font-weight: bold;
+}
+
+nav li a {
+	font-size: 1.2rem;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .text-decoration-none,

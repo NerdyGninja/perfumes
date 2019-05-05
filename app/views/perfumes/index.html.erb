@@ -4,7 +4,17 @@
     <h5>Free delivery on orders exceeding R400</h5>
     <h6>R90 Delivery fee for orders under R400</h6>
   </div>
+
   <hr>
+
+  <%= form_with(url: perfumes_path, method: 'get', local: true, class: 'form-control-sm', id: 'form-search') do |form| %>
+  <div class="row justify-content-center">
+    <%= form.label :q, 'Search for:', class: 'sr-only' %>
+    <%= form.text_field :q, id: 'q', value: params[:q] %>
+    <%= form.submit "Search" %>
+
+  </div>
+  <% end -%>
 
   <div class="row">
     <% @perfumes.each do |perfume| %>
