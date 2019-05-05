@@ -6,9 +6,9 @@ class PerfumesController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      @perfumes = Perfume.search(search_term)
+      @perfumes = Perfume.search(search_term).paginate(page: params[:page])
     else
-      @perfumes = Perfume.all
+      @perfumes = Perfume.paginate(page: params[:page], per_page: 16)
     end
   end
 
