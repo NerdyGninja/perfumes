@@ -31,7 +31,7 @@ h1, h2, h3 {
 	font-family: 'Tangerine', cursive;
 }
 
-h4, h5, h6, p, button, a, span, li, input {
+h4, h5, h6, p, button, a, span, li, input, textarea {
   font-family: 'Alegreya SC', serif;
 }
 
@@ -80,8 +80,8 @@ nav li a {
 	border: 0.5px solid #DCDCDC;
 }
 
-.padding {
-	padding-top: 50px
+.padding-top {
+	padding-top: 30px
 }
 
 .perfume-show-image img {
@@ -100,11 +100,14 @@ nav li a {
 }
 
 footer {
-	margin-top: 20px;
 	background-color: #343a40;
 }
 
 .copyright {
 	padding: 5px;
 	background-color: #BEBEBE;
+}
+
+#accordion {
+	margin-bottom: 20px;
 }
