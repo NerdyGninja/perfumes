@@ -1,6 +1,7 @@
 class PerfumesController < ApplicationController
   before_action :set_perfume, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  load_and_authorize_resource only: [:new, :edit, :update, :destroy]
 
   # GET /perfumes
   # GET /perfumes.json

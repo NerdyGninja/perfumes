@@ -7,15 +7,14 @@
   
   <%= render 'layouts/nav' %>
 
-  <%if notice.present? || alert.present? %>
-  <div class="row">
-    <%is_alert = alert.present? ? "alert" : ""%>
-    <div data-alert class="alert-box <%=is_alert%>">
-      <%=notice || alert%>
-      <a href="#" class="close">&times;</a>
-    </div>
-  </div>
-  <%end%>
+
+  <% if notice %>
+  <p id="notice" class="alert alert-primary"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p id="alert" class="alert alert-warning"><%= alert %></p>
+  <% end %>
+
 
   <div class="container-fluid main-container">
     <%= yield %>

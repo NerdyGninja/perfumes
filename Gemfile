@@ -34,8 +34,10 @@ gem 'jquery-rails'
 # Pagination gem
 gem 'will_paginate', '~> 3.1.0'
 
-#Devise for authentication
+# Devise for authentication
 gem 'devise'
+# CanCanCan for authorization
+gem 'cancancan', '~> 1.10'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
