@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
 
-  <%= render 'layouts/header' %>
+<%= render 'layouts/header' %>
 
-  <body>
-    
-    <%= render 'layouts/nav' %>
+<body>
+  
+  <%= render 'layouts/nav' %>
 
-    <div class="container-fluid main-container">
-      <%= yield %>
+  <%if notice.present? || alert.present? %>
+  <div class="row">
+    <%is_alert = alert.present? ? "alert" : ""%>
+    <div data-alert class="alert-box <%=is_alert%>">
+      <%=notice || alert%>
+      <a href="#" class="close">&times;</a>
     </div>
+  </div>
+  <%end%>
 
-    <%= render 'layouts/footer' %>
+  <div class="container-fluid main-container">
+    <%= yield %>
+  </div>
 
-  </body>
+  <%= render 'layouts/footer' %>
+
+</body>
 </html>
