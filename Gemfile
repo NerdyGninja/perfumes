@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 # Use jQuery-rails for jquery
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 
 # Pagination gem

@@ -14,11 +14,26 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require jquery-ui
 //= require_tree .
 
 $(document).on('turbolinks:load', function(){
 
 	/* Fade alerts and notices */
 	$('.alert').delay(1000).fadeOut(3000);
+
+	/* Add input when checkbox is clicked  
+	var checkbox = document.getElementById('maidenname');
+	checkbox.addEventListener('click', function () {
+		if (document.getElementById('mn')) {
+			document.getElementById('mn').remove();
+		} else {
+			var input = document.createElement("input");
+			input.id = 'mn';
+			input.type = 'text';
+			input.placeholder = 'Maiden Name';
+			document.body.appendChild(input);
+		}
+	}); */
 
 });
