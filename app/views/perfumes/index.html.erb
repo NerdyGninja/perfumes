@@ -26,7 +26,7 @@
           <h6 class="brand font-weight-bold"><%= perfume.brand %></h6>
           <h6><%= perfume.title %></h6>
           <p class="text-muted"><%= perfume.volume %>ml - <%= perfume.gender %></p>
-          <p class="perfume-price">R<%= perfume.price %></p>
+          <!-- <p class="perfume-price">R<%#= perfume.price %></p> -->
           <% if user_signed_in? && current_user.admin? %>
           <%= link_to 'Show', perfume %>
           <%= link_to 'Edit', edit_perfume_path(perfume) %>
